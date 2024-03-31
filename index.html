@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <title>Slider</title>
+</head>
+<body>
+    <div class="listSlider swiper">
+        <div class="swiper-wrapper">
+            <div class="image swiper-slide">
+                <img src="./image/image1.jpg" alt="">
+            </div>
+            <div class="image swiper-slide">
+                <img src="./image/image2.jpg" alt="">
+            </div>
+            <div class="image swiper-slide">
+                <img src="./image/image3.jpg" alt="">
+            </div>
+            <div class="image swiper-slide">
+                <img src="./image/image4.jpg" alt="">
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+</body>
+<script>
+    var swiper = new Swiper(".listSlider", {
+        slidesPerView: 1,
+        loop: true,
+        pagination:{
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation:{
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+        }
+    })
+</script>
+</html>
